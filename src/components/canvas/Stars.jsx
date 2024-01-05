@@ -3,7 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, Preload } from "@react-three/drei";
 
 const Clouds = () => {
-  const { scene } = useGLTF('src/components/canvas/clouds.glb'); // Update the path to your .glb file
+  const { scene } = useGLTF('public/assets/clouds.glb'); // Update the path to your .glb file
   const ref = useRef();
 
   // Adjust material properties

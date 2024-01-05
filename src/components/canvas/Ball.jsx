@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 const Earth = () => {
-  const { scene } = useGLTF('src/components/canvas/clouds.glb'); // Update the path to your .glb file
+  const { scene } = useGLTF('public/assets/clouds.glb'); // Update the path to your .glb file
   return <primitive object={scene} />;
 };
 
