@@ -27,7 +27,7 @@ const AnimatedModel = ({ url, position }) => {
 };
 
 const EarthCanvas = () => {
-  const modelUrl = "dist/assets/robot.glb"; // Replace with your model's URL
+  const modelUrl = "/assets/robot.glb"; // Replace with your model's URL
 
   return (
     <Canvas
