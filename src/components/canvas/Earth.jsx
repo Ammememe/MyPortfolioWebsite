@@ -27,7 +27,7 @@ const AnimatedModel = ({ url, position }) => {
 };
 
 const EarthCanvas = () => {
-  const modelUrl = "public/assets/robot.glb"; // Replace with your model's URL
+  const modelUrl = "dist/assets/robot.glb"; // Replace with your model's URL
 
   return (
     <Canvas
@@ -43,6 +43,11 @@ const EarthCanvas = () => {
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[0, 0, 5]} />
+        <Rotating>
+          <AnimatedModel url={modelUrl} position={[0, 0, 0]} />
+        </Rotating>
         <OrbitControls
           autoRotate={false}
           enableZoom={true}
@@ -51,14 +56,24 @@ const EarthCanvas = () => {
           maxPolarAngle={Math.PI}
           minPolarAngle={0}
         />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[0, 0, 5]} />
-        <AnimatedModel url={modelUrl} position={[0, 0, 0]} />
-
         <Preload all />
       </Suspense>
     </Canvas>
   );
 };
+
+
+const Rotating = ({ children }) => {
+  const ref = useRef();
+
+  useFrame(() => {
+    // Rotate the model each frame
+    ref.current.rotation.y += 0.01; // Adjust this value to change the rotation speed
+  });
+
+  return <group ref={ref}>{children}</group>;
+};
+
+
 
 export default EarthCanvas;
