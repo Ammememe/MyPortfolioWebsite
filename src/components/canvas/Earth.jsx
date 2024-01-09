@@ -18,9 +18,7 @@ const AnimatedModel = ({ url, position }) => {
   }, [animations]);
 
   useFrame((_, delta) => {
-    if (mixerRef.current) {
-      mixerRef.current.update(delta);
-    }
+    mixerRef.current?.update(delta);
   });
 
   return <primitive ref={groupRef} object={scene} position={position} />;
@@ -32,14 +30,14 @@ const EarthCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop='always' // Changed to 'always' for continuous animation
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
         fov: 35,
         near: 0.1,
         far: 1000,
-        position: [4, 4, 12], // Adjust camera position as needed
+        position: [3, 3, 10], // Adjust camera position as needed
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -50,7 +48,7 @@ const EarthCanvas = () => {
         </Rotating>
         <OrbitControls
           autoRotate={false}
-          enableZoom={true}
+          enableZoom={false}
           enablePan={true}
           enableRotate={true}
           maxPolarAngle={Math.PI}
@@ -62,18 +60,14 @@ const EarthCanvas = () => {
   );
 };
 
-
 const Rotating = ({ children }) => {
   const ref = useRef();
 
   useFrame(() => {
-    // Rotate the model each frame
     ref.current.rotation.y += 0.01; // Adjust this value to change the rotation speed
   });
 
   return <group ref={ref}>{children}</group>;
 };
-
-
 
 export default EarthCanvas;

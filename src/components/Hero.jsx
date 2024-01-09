@@ -22,7 +22,7 @@ function Hero() {
             Hi, I'm <span className='text-[#915eff]'>Amir</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-[#0980d3]-100`}>
-            I develop things and automate it with<br className='sm:block hidden'/> the Cloud
+            I develop things and automate it <br className='sm:block hidden'/> using AWS
           </p>
         </div>
       </div>
