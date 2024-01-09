@@ -179,7 +179,7 @@ import {
       title: "Cloud Development AWS",
       school_name: "Jensens Yrkeshögskola",
       icon: jensens, // Replace with actual icon path
-      iconBg: "#E6DEDD",
+      iconBg: "#0980d3",
       date: "2021-2022",
       points: [
         "Avancerade Programmeringsfärdigheter: Betydande kunskap i objektorienterad programmering, särskilt med Java SE, och systematisk programutveckling. Färdigheter i att utveckla, felsöka och testa program med moderna programmeringsmetoder och verktyg.",
@@ -193,10 +193,11 @@ import {
       title: "Software Engineering and Management",
       school_name: "University of Gothenburg | Chalmers University of Technology",
       icon: school, // Replace with actual icon path
-      iconBg: "#E6DEDD",
+      iconBg: "#0980d3",
       date: "2021-2022",
       points: [
         "Foundations of Object-Oriented Programming",
+        "UX/UI Design"
         // Add more points here if needed
       ],
     },

@@ -13,7 +13,7 @@ const Clouds = () => {
         // Modifying the existing material
         child.material.color.set('blue'); // Adjust the color
         child.material.transparent = true;
-        child.material.opacity = 20; // Adjust opacity to make it appear darker
+        child.material.opacity = 8; // Adjust opacity to make it appear darker
       }
     });
   }, [scene]);
@@ -21,7 +21,7 @@ const Clouds = () => {
   // Add random rotation
   useFrame(() => {
     ref.current.rotation.x += 0.000001; // Adjust these values for different speed and direction
-    ref.current.rotation.y += 0.001; // Adjust these values for different speed and direction
+    ref.current.rotation.y += 0.00015; // Adjust these values for different speed and direction
   });
 
   return <primitive ref={ref} object={scene} />;
