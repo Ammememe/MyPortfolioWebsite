@@ -17,7 +17,7 @@ const ExperienceCard = ({ experience }) => {
     <VerticalTimelineElement
       contentStyle={{
         background: "#1d1836",
-        color: "#fff",
+        color: "#0980d3", // Changed to #6D5593
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
@@ -33,9 +33,9 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
+        <h3 className='text-[#0980d3] text-[24px] font-bold'>{experience.title}</h3> {/* Changed to #6D5593 */}
         <p
-          className='text-secondary text-[16px] font-semibold'
+          className='text-[#0980d3] text-[16px] font-semibold' // Changed to #6D5593
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -46,7 +46,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className='text-[#0980d3] text-[14px] pl-1 tracking-wider' // Changed to #6D5593
           >
             {point}
           </li>
@@ -60,10 +60,10 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+        <p className={`${styles.sectionSubText} text-center text-[#005c9d]`}> {/* Changed to #6D5593 */}
+         
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-center text-[#005c9d]`}> {/* Changed to #6D5593 */}
           Work Experience.
         </h2>
       </motion.div>

@@ -27,7 +27,7 @@ const ServiceCard = ({ index, title, icon }) => (
           className='w-16 h-16 object-contain'
         />
 
-        <h3 className='text-[#6D5593] text-[20px] font-bold text-center'>
+        <h3 className='text-[#005c9d] text-[20px] font-bold text-center'>
           {title}
         </h3>
       </div>
@@ -39,7 +39,7 @@ const About = () => {
   return (
     <>
    <motion.div variants={textVariant()}>
-  <p className="text-[#60618b] font-bold">Introduction</p> {/* Changes made here */}
+  <p className="text-[#005c9d] font-bold">Introduction</p> {/* Changes made here */}
   <h2 className={styles.sectionHeadText}>Overview.</h2>
 </motion.div>
 
@@ -47,7 +47,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-6 text-[#24152c] text-[20px] max-w-3xl leading-[30px]'
+        className='mt-6 text-[#005c9d] text-[20px] max-w-3xl leading-[30px]'
       >
          As a passionate cloud software developer, 
         my expertise lies in Java and Cloud Computing, with a deep focus on AWS technologies. 

@@ -121,7 +121,7 @@ import {
       title: "Internship Fullstack Developer",
       company_name: "Swedcon18",
       icon: swedcon18,
-      iconBg: "#383E56",
+      iconBg: "#005c9d",
       date: "November 2023 - February 2024",
       points: [
         "Developing and maintaining web applications using React.js and other related technologies.",
@@ -133,7 +133,7 @@ import {
       title: "Retail Sales Associate",
       company_name: "Tele2",
       icon: tele2,
-      iconBg: "#E6DEDD",
+      iconBg: "#005c9d",
       date: "Jan 2022 - PRESENT",
       points: [
         "Exceptional customer service delivery.",
@@ -146,7 +146,7 @@ import {
       title: "Marketing & Sales",
       company_name: "Storytel",
       icon: storytel,
-      iconBg: "#383E56",
+      iconBg: "#005c9d",
       date: "June 2021 - August 2021",
       points: [
         "Role as a marketer and sales representative for Storytel.",
@@ -162,7 +162,7 @@ import {
       title: "Retail Sales Associate",
       company_name: "Elkjop",
       icon: Elkjop,
-      iconBg: "#E6DEDD",
+      iconBg: "#005c9d",
       date: "September 2018 - Mars 2020",
       points: [
         "Specialized in handling retail sales at Elgiganten, addressing the needs of both individual consumers and business clients",

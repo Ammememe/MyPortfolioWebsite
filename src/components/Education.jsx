@@ -8,16 +8,16 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
-import { education } from "../constants"; // Importing education data
+import { education } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const EducationCard = ({ educationEntry }) => { // Renamed for clarity
+const EducationCard = ({ educationEntry }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
         background: "#1d1836",
-        color: "#fff",
+        color: "#0980d3", // Changed to #6D5593
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={educationEntry.date}
@@ -26,16 +26,16 @@ const EducationCard = ({ educationEntry }) => { // Renamed for clarity
         <div className='flex justify-center items-center w-full h-full'>
           <img
             src={educationEntry.icon}
-            alt={educationEntry.school_name} 
+            alt={educationEntry.school_name}
             className='w-[60%] h-[60%] object-contain'
           />
         </div>
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{educationEntry.title}</h3>
+        <h3 className='text-[#0980d3] text-[24px] font-bold'>{educationEntry.title}</h3> {/* Changed to #6D5593 */}
         <p
-          className='text-secondary text-[16px] font-semibold'
+          className='text-[#0980d3] text-[16px] font-semibold' // Changed to #6D5593
           style={{ margin: 0 }}
         >
           {educationEntry.school_name}
@@ -46,7 +46,7 @@ const EducationCard = ({ educationEntry }) => { // Renamed for clarity
         {educationEntry.points.map((point, index) => (
           <li
             key={`education-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className='text-[#0980d3] text-[14px] pl-1 tracking-wider' // Changed to #6D5593
           >
             {point}
           </li>
@@ -56,21 +56,21 @@ const EducationCard = ({ educationEntry }) => { // Renamed for clarity
   );
 };
 
-const Education = () => { // Renamed the component
+const Education = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          My
+        <p className={`${styles.sectionSubText} text-center text-[#005c9d]`}> {/* Changed to #6D5593 */}
+          
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-center text-[#005c9d]`}> {/* Changed to #6D5593 */}
           Education
         </h2>
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
-          {education.map((educationEntry, index) => ( // Looping through education
+          {education.map((educationEntry, index) => (
             <EducationCard
               key={`education-${index}`}
               educationEntry={educationEntry}
@@ -82,4 +82,4 @@ const Education = () => { // Renamed the component
   );
 };
 
-export default SectionWrapper(Education, "education"); // Updated the section name
+export default SectionWrapper(Education, "education");

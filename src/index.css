@@ -18,6 +18,15 @@
   padding-bottom: 100px;
   display: block;
 }
+/* Add this to your CSS */
+.sectionSubText {
+  color: #6D5593; /* Your desired color */
+}
+
+.sectionHeadText {
+  color: #6D5593; /* Your desired color */
+}
+
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */
